@@ -2,7 +2,7 @@ import boto3
 import os
 
 # config
-BUCKET_NAME = 'drone-sharing-2021'
+BUCKET_NAME = os.environ.get('AWS_DEMO_BUCKET_NAME', 'drone-sharing-2021')
 OBJECT_NAME = 'hello.txt'
 ACCESS_KEY = os.environ['AWS_DEMO_ACCESS_KEY']
 SECRET_KEY = os.environ['AWS_DEMO_SECRET_KEY']
